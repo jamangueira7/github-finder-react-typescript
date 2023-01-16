@@ -7,10 +7,12 @@ function User({ login, avatar_url, followers, following, location }: UserProps) 
     <div>
       <img src={avatar_url} alt={login} />
       <h2>{login}</h2>
-      <p>
-        <MdLocationPin />
-        <span>{location}</span>
-      </p>
+      {location && (
+        <p>
+          <MdLocationPin />
+          <span>{location}</span>
+        </p>
+      )}
       <div>
         <div>
           <p>Seguidores:</p>
